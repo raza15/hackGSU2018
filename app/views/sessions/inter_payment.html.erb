@@ -1,0 +1,47 @@
+
+<head>
+<style>
+a {
+    font-size: 500%;
+}
+</style>
+  <script type="text/javascript">
+    function onVisaCheckoutReady (){
+    V.init({ apikey: "M0PR0S2VTEGG62YI8WE721Mer8Oe44IiK0lsgnlsbWsTgdpCY", paymentRequest:{
+     currencyCode: "USD",
+     subtotal: "11.00"
+     }});
+    }
+    V.on("payment.success", function(payment) {console.log("HELL YEAHH"); });
+	V.on("payment.cancel", function(payment) {alert(JSON.stringify(payment)); });
+	V.on("payment.error", function(payment,error) {alert(JSON.stringify(error));});
+  </script>
+</head>
+
+<body>
+	<br>
+	<center>
+	
+		<a href="/creditpayment"><button type="button" class="btn btn-info" style="width:200px;height:100px;">Enter Credit Card Information</button></a><br>
+		<br>
+		<img alt="Visa Checkout" class="v-button" role="button" src="https://sandbox.secure.checkout.visa.com/wallet-services-web/xo/button.png" onclick="visaCheckOutSpeech()"/>
+
+	</center>
+
+	<script type="text/javascript" src="/sdk.js">
+	</script>
+	<script type="text/javascript">
+		function visaCheckOutSpeech() {
+			var msg1 = new SpeechSynthesisUtterance("You have selected the visa quick checkout payment. Please enter your password or create a new account with visa.");
+			window.speechSynthesis.speak(msg1);			
+		}
+	</script>
+</body>
+
+<script type="text/javascript">
+    var total_cost = gon.total_cost;
+	var msg1 = new SpeechSynthesisUtterance(gon.speech + " Please choose a method of payment: Visa Cyber Source or Visa Quick Checkout.");
+	window.speechSynthesis.speak(msg1);
+</script>
+
+

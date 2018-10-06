@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>Voicebot</title>
+    <link type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/layout.css" />
+
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript" src="/ApiAi.js"></script>
+    <script type="text/javascript" src="/app.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js">
+     </script>
+    <script>
+          $(document).ready(function(){
+            $("#card").click(function(){
+
+              $("#card").flip();
+            });
+          });
+
+           $(document).ready(function () {
+              });
+
+    </script>
+    <style>
+        body {
+            background-color: #444;
+            margin: 0;
+        }    
+        #wrapper {
+             width: 1005px;
+             margin: 0 auto;
+        }
+        #leftcolumn, #rightcolumn {
+            float: left;
+            min-height: 450px;
+            color: white;
+        }
+        #leftcolumn {
+             width: 750px;
+             background-color: #777;
+        }
+        #rightcolumn {
+              border: 1px solid white;
+             width: 200px;
+             background-color: #777;
+             float:right;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width" />
+  </head>
+<body>
+
+
+
+
+
+  <br><br>
+
+  
+  <div id="wrapper">
+    <div id="leftcolumn">
+      <div class="app-container" style="width: 50rem;">
+        <div class="app-header"><h1>Voice Driven Ordering</h1></div>
+        <div class="app-content" style="display:none;">
+          <div class="time-indicator"><div class="time-indicator-content">8:20</div><hr /></div>
+        </div>
+        <div class="app-footer">
+          <div class="app-footer-inner">
+            <div class="mic">
+              <div class="ready"><a href="#" id="start"><img src="/i/mic.svg" alt="Tap me to speak" /></a></div>
+              <div class="listening"><span class="listening-1">.</span><span class="listening-2">.</span><span class="listening-3">.</span></div>
+            </div>
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+
+      <div id="card"> 
+        <div class="front"> 
+            <img id="img1" src="/images/all_menu.png" alt="Mountain View" width="500" height="377">
+
+            
+
+        </div> 
+        <div class="back" id="back">
+
+              <img id="img1" src="/images/dunkin-donut.jpg" alt="Mountain View" width="500" height="377">
+        </div> 
+      </div>
+
+
+
+
+        <!-- <img id="img1" src="/images/all_menu.png" alt="Mountain View" width="500" height="377">
+      </div> -->
+
+<div>
+
+
+</div>
+
+    </div>
+    <div id="rightcolumn">
+      <center><h3>Your Order ID: <%=session[:order_id]%></h3><hr></center>
+      <p id="p1"></p>
+      <hr>
+      <p id="p2"></p>
+    </div>
+  </div>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-907594-9', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+</body>
+</html>

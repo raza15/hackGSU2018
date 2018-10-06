@@ -1,0 +1,10 @@
+<center><img src="/images/sparklabs_checkout.png" alt="End Page" ></center>
+
+<script type="text/javascript">
+	var msg1 = new SpeechSynthesisUtterance("Thank you for your purchase. Your order was completed successfully. Have a wonderful day!");
+	window.speechSynthesis.speak(msg1);
+
+	setTimeout(function() {
+	    window.location.href = "/sessions/new";
+	}, 10000);
+</script>
