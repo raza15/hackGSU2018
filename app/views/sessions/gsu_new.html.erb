@@ -3,26 +3,12 @@
 <head>
 <style>
 body  {
-    background-image: url('/chick-fil-a.png')
+    /*background-image: url('/walmart.png')*/
 }
 </style>
 <script type='text/javascript'>
 var imageID=0;
 function changeimage(every_seconds){
-    //change the image
-    if(!imageID){
-        document.getElementById("myimage").src="/images_burgers/img5.png";
-        imageID++;
-    }
-    else{if(imageID==1){
-        document.getElementById("myimage").src="/images_burgers/img6.png";
-        imageID++;
-    }else{if(imageID==2){
-        document.getElementById("myimage").src="/images_burgers/img7.png";
-        imageID=0;
-    }}}
-    //call same function again for x of seconds
-    setTimeout("changeimage("+every_seconds+")",((every_seconds)*1000));
 }
 </script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -35,7 +21,7 @@ function changeimage(every_seconds){
     <script type="text/javascript" src="/app.js"></script>
     <style>
         body {
-            background-color: #444;
+            background-color: #336;
             margin: 0;
         }    
     </style>
@@ -44,7 +30,7 @@ function changeimage(every_seconds){
     <center>
     <div id="leftcolumn">
       <div class="app-container">
-        <div class="app-header"><h1>Chick-fil-A</h1></div>
+        <div class="app-header"><img src="/walmart.png" style="width:480px;height:75px;"></div>
         <div class="app-content" style="display:none;">
           <div class="time-indicator"><div class="time-indicator-content">8:20</div><hr /></div>
         </div>
@@ -57,7 +43,7 @@ function changeimage(every_seconds){
           </div>
         </div>
         <div onload='changeimage(2)'>
-          <img id="myimage" src="/images_burgers/img1.jpg" alt="Mountain View" width="500" height="377">
+<!--           <img id="myimage" src="/images_burgers/img1.jpg" alt="Mountain View" width="500" height="377"> -->
         </div>
       </div>
     </div>
